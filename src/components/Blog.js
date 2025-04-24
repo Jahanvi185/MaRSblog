@@ -1,7 +1,7 @@
 
 import React from 'react';
 import './Blog.css';
-import blogImg from './blog.jpg';
+import blogImg from './Blog.jpg';
 import AIImage from './AI.jpg'
 import InteriitImage from './Interiit.png'
 import post1 from './post1.jpg'
