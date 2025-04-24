@@ -1,34 +1,226 @@
 body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #1b0030;
-    color: white;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #1b0030;
+  color: white;
+}
+
+.blog-container {
+  max-width: 90vw;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.hero-section img {
+  margin-top: 80px;
+  justify-self: center;
+  width: 80vw;
+  border-radius: 12px;
+}
+
+.hero-section h1 {
+  justify-self: center;
+  font-size: 2.4rem;
+
+}
+
+#twocontainer {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+#twocontainer>div {
+  display: flex;
+  gap: 32px;
+  background-color: #2d0050;
+  padding: 24px;
+  border-radius: 16px;
+  justify-content: space-between;
+}
+
+#twocontainer img {
+  width: 20vw;
+  min-width: 300px;
+}
+
+#twocontainer h2 {
+  font-size: 2rem;
+}
+
+.categories>h1,
+#latest-posts>h1 {
+  padding: 0px 20px;
+  border-bottom: 1px solid white;
+}
+
+#postcards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  padding: 20px 0px;
+}
+
+#postcard {
+  width: 26%;
+  background-color: #2d0050;
+  padding: 24px 16px;
+  border-radius: 20px;
+}
+
+#postcard img {
+  width: 100%;
+}
+
+#categories {
+  display: flex;
+  flex-direction: column;
+}
+
+#categorycards {
+  width: 98%;
+  display: flex;
+  padding: 20px 0px;
+  justify-content: space-between;
+  padding-bottom: 32px;
+}
+
+#categorycard {
+  width: 32%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 20px;
+  align-items: center;
+  background-color: rgb(22, 22, 22);
+}
+
+#categorycard img {
+  width: 100%;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+#categorycard p {
+  font-size: 8px;
+}
+
+#blackbg {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 890px) {
+  #twocontainer {
+    width: 96vw;
+    flex-direction: row;
+    justify-content: space-evenly;
+
   }
-  
-  .blog-container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
+
+  #twocontainer>div {
+    /* flex-direction: column; */
+    width: 44vw;
+    justify-content: center;
+    align-items: center;
   }
- 
- 
-  .hero-section {
-    text-align: center;
-    margin-bottom: 40px;
+
+  .featured-section {
+    flex-direction: column;
   }
-  .hero-section img {
-    margin-top: 70px;
+
+  .highlight-card {
+    flex-direction: column-reverse;
+  }
+
+  #twocontainer img {
     width: 100%;
-    max-height: 300px;
-    object-fit: cover;
-    border-radius: 12px;
+    min-width: 180px;
   }
-  .hero-section h1 {
-    margin-top: 20px;
-    font-size: 2rem;
+
+  #categorycards {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
   }
-  
-  /* Featured */
+
+  #categorycard {
+    width: 46%;
+
+  }
+}
+
+@media (max-width: 504px) {
+  #categorycards {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+  }
+
+  #categorycard {
+    width: 90%;
+
+  }
+}
+
+@media (max-width: 600px) {
+  #twocontainer {
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  #twocontainer>div {
+    /* flex-direction: column; */
+    width: 80vw;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #twocontainer img {
+    width: 100%;
+  }
+
+  .Interiit-img>img {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 1100px) {
+  #postcard {
+    width: 42%;
+  }
+}
+
+@media (max-width: 800px) {
+  #postcard {
+    width: 90%;
+  }
+}
+
+
+/* 
+
+#twocontainer>div{
+  display: flex;
+}
+
+
+
+
   .featured-section {
     display: flex;
     justify-content: space-between;
@@ -175,7 +367,7 @@ body {
     color: #ccc;
   }
   
-  /* Responsive */
+
   @media (max-width: 768px) {
     .featured-section {
       flex-direction: column;
@@ -186,4 +378,4 @@ body {
       width: 100%;
     }
   }
-
+ */
