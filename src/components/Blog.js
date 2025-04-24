@@ -41,7 +41,7 @@ const Blog = () => {
         },
         {
             image: post5,
-            title: 'Human-Robot Collaboration',
+            title: 'Robot Collaboration',
             description: 'Designing robots that safely and efficiently work alongside people.',
         },
         {
@@ -53,20 +53,23 @@ const Blog = () => {
     const categories = [
         {
             image: category1,
-            title: 'Future of Robotics'
-            
+            title: 'Technology',
+            subtitle: 'Exploring the future'
+
         },
 
         {
             image: category2,
-            title: 'Future of Robotics'
-            
+            title: 'Achievements',
+            subtitle: 'Excellence through effort'
+
         },
 
         {
             image: category3,
-            title: 'Future of Robotics'
-            
+            title: 'Workshops',
+            subtitle: 'Create with curiosity'
+
         }
     ];
 
@@ -80,73 +83,66 @@ const Blog = () => {
             </div>
 
 
-            <div className="featured-section">
-                <div className="featured-left">
-                    <p className="category-date">Technology | Jan 16, 2025</p>
-                    <h2>AI in Robotics</h2>
-                    <p className="description">
-                        Enhancing robotics with AI for smarter automation, decision-making, and adaptability.
-                    </p>
-                    <button>Read More</button>
-                </div>
-                <div className="featured-right">
-                    <img src={AIImage} alt="" />
-                </div>
-            </div>
-
-
-            <div className="highlight-card">
-                <div className='Highlight-left'>
-                    <p className="category-date">Achievements | Dec 22, 2022</p>
-                    <h3>Inter IIT 2022</h3>
-                    <p>
-                        Showcasing the journey, passion, and triumph behind our Inter IIT medal-winning legacy.
-                    </p>
-                    <button>Read More</button>
-                </div>
-                <div className='Interiit-img'>
-                    <img src={InteriitImage} alt="" />
-                </div>
-            </div>
-            {/* <h3>Latest-posts</h3> */}
-            <div className="latest-posts">
-            </div>
-            <div className="latest-posts">
-                {posts.map((post, index) => (
-                    <div className="post-card" key={index}>
-                        <img src={post.image} alt={post.title} />
-                        <h4>{post.title}</h4>
-                        <p>{post.description}</p>
+            <div id='twocontainer'>
+                <div className="featured-section">
+                    <div className="featured-right">
+                        <img src={AIImage} alt="" />
+                    </div>
+                    <div className="featured-left">
+                        <p className="category-date">Technology | Jan 16, 2025</p>
+                        <h2>AI in Robotics</h2>
+                        <p className="description">
+                            Enhancing robotics with AI for smarter automation, decision-making, and adaptability.Enhancing robotics with AI for smarter automation and adaptability.
+                        </p>
                         <button>Read More</button>
                     </div>
-                ))}
-            </div>
-            <h3>Latest-Categories</h3>
+                </div>
 
-            <div className="latets-categories">
-            </div>
-            
-            <div className="Category-posts">
-                {categories.map((category, index) => (
-                    <div className="category-card" key={index}>
-                        <img src={category.image} alt={category.title} />
-                        <h4>{category.title}</h4>
-        
-                        <button>Know More</button>
+
+                <div className="highlight-card">
+                    <div className='Highlight-left'>
+                        <p className="category-date">Achievements | Dec 22, 2022</p>
+                        <h2>Inter IIT 2022</h2>
+                        <p>
+                            Showcasing the journey, passion, and triumph behind our Inter IIT medal-winning legacy.Showcasing the journey, passion, our Inter IIT medal-winning legacy.
+                        </p>
+                        <button>Read More</button>
                     </div>
-                ))}
+                    <div className='Interiit-img'>
+                        <img src={InteriitImage} alt="" />
+                    </div>
+                </div>
+            </div>
+
+            <div id="latest-posts">
+                <h1>Latest Posts</h1>
+                <div id='postcards'>
+                    {posts.map((post, index) => (
+                        <div id="postcard" key={index}>
+                            <img src={post.image} alt={post.title} />
+                            <h4>{post.title}</h4>
+                            <p>{post.description}</p>
+                            <button>Read More</button>
+                        </div>
+                    ))}
+                </div>
             </div>
 
 
-
-
-
-
-
-
-
-
-
+            <div className="categories">
+                <h1>Categories</h1>
+                <div id='categorycards'>
+                    {categories.map((category, index) => (
+                        <div id="categorycard" key={index}>
+                            <img src={category.image} alt={category.title} />
+                            <div id='blackbg'>
+                                <h5>{category.title}</h5>
+                                <p>{category.subtitle}</p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
         </div>
     );
 };

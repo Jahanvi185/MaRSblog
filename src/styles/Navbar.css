@@ -71,13 +71,13 @@ body {
     align-items: center;
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:1020px) {
     #mobile {
         display: none;
     }
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1020px) {
     .navbar {
         padding: 10px 3%;
     }
